@@ -3,6 +3,8 @@ sigsolve
 
 type signature satisfiability solver under function composition
 
+[![build status](https://secure.travis-ci.org/substack/sigsolve.png)](http://travis-ci.org/substack/sigsolve)
+
 example
 =======
 
