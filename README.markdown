@@ -6,6 +6,28 @@ type signature satisfiability solver under function composition
 example
 =======
 
+``` js
+var test = require('tap').test;
+var sigsolve = require('../');
+
+var pool = [
+    [ 'a', 'b' ],
+    [ 'b', 'x' ],
+    [ 'x', 'z' ],
+    [ 'c', 'z' ],
+    [ 'c', 'd' ],
+];
+
+var solutions = sigsolve([ 'a', 'z' ], pool);
+console.dir(solutions);
+```
+
+output:
+
+```
+[ [ [ 'a', 'b' ], [ 'b', 'x' ], [ 'x', 'z' ] ] ]
+```
+
 methods
 =======
 
