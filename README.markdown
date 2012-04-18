@@ -11,16 +11,13 @@ methods
 
 var sigsolve = require('sigsolve')
 
-var solve = sigsolve(pool)
---------------------------
+sigsolve(target, pool)
+----------------------
 
-Return a solver function for `pool`, an array of type signatures.
+Given a type signature `target` and an array of type signatures `pool`,
 
-solve(signature)
-----------------
-
-Return an array of arrays of the type signatures that when composed have the
-same signature as `signature`.
+return an array of type signature arrays that when composed have the same
+type signature as the `target`.
 
 license
 =======

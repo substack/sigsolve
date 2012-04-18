@@ -1,5 +1,3 @@
-module.exports = function (pool) {
-    return function (outer) {
-        return [];
-    };
+module.exports = function solve (signature, pool) {
+    return [];
 };

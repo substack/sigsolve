@@ -10,14 +10,12 @@ test('a to z', function (t) {
         [ 'c', 'z' ],
         [ 'c', 'd' ],
     ];
-    var solve = sigsolve(pool);
-    
     t.same(
-        solve([ 'a', 'z' ]),
+        sigsolve([ 'a', 'z' ], pool),
         [ [ 'a', 'b' ], [ 'b', 'x' ], [ 'x', 'z' ] ]
     );
     
-    t.same(solve([ 'a', 'd' ]), []);
+    t.same(sigsolve([ 'a', 'd' ], pool), []);
     
     t.end();
 });
