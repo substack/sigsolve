@@ -1,7 +1,7 @@
 {
     "name" : "sigsolve",
     "description" : "type signature satisfiability solver under function composition",
-    "version" : "0.0.0",
+    "version" : "0.1.0",
     "repository" : {
         "type" : "git",
         "url" : "git://github.com/substack/sigsolve.git"

@@ -12,13 +12,13 @@ example
 var test = require('tap').test;
 var sigsolve = require('sigsolve');
 
-var pool = [
-    [ 'a', 'b' ],
-    [ 'b', 'x' ],
-    [ 'x', 'z' ],
-    [ 'c', 'z' ],
-    [ 'c', 'd' ],
-];
+var pool = {
+    f : [ 'a', 'b' ],
+    g : [ 'b', 'x' ],
+    h : [ 'x', 'z' ],
+    i : [ 'c', 'z' ],
+    j : [ 'c', 'd' ],
+};
 
 var solutions = sigsolve([ 'a', 'z' ], pool);
 console.dir(solutions);
@@ -27,7 +27,7 @@ console.dir(solutions);
 output:
 
 ```
-[ [ [ 'a', 'b' ], [ 'b', 'x' ], [ 'x', 'z' ] ] ]
+[ [ 'f', 'g', 'h' ] ]
 ```
 
 methods
@@ -38,10 +38,11 @@ var sigsolve = require('sigsolve')
 sigsolve(target, pool)
 ----------------------
 
-Given a type signature `target` and an array of type signatures `pool`,
+Given a type signature `target` and an object `pool` mapping function names to
+type signatures,
 
-return an array of type signature arrays that when composed have the same
-type signature as the `target`.
+return an array of function chain arrays that when composed have the same type
+signature as the `target`.
 
 license
 =======
