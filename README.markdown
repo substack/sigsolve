@@ -10,7 +10,7 @@ example
 
 ``` js
 var test = require('tap').test;
-var sigsolve = require('../');
+var sigsolve = require('sigsolve');
 
 var pool = [
     [ 'a', 'b' ],
