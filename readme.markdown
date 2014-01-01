@@ -2,6 +2,8 @@
 
 find a path through a type signature pool
 
+[![testling badge](https://ci.testling.com/substack/sigsolve.png)](https://ci.testling.com/substack/sigsolve)
+
 [![build status](https://secure.travis-ci.org/substack/sigsolve.png)](http://travis-ci.org/substack/sigsolve)
 
 # example
