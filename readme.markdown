@@ -1,17 +1,13 @@
-sigsolve
-========
+# sigsolve
 
-type signature satisfiability solver under function composition
+find a path through a type signature pool
 
 [![build status](https://secure.travis-ci.org/substack/sigsolve.png)](http://travis-ci.org/substack/sigsolve)
 
-example
-=======
+# example
 
 ``` js
-var test = require('tap').test;
 var sigsolve = require('sigsolve');
-
 var pool = {
     f : [ 'a', 'b' ],
     g : [ 'b', 'x' ],
@@ -30,13 +26,31 @@ output:
 [ [ 'f', 'g', 'h' ] ]
 ```
 
-methods
-=======
+or higher-order signatures work too:
+
+``` js
+var sigsolve = require('sigsolve');
+var pool = {
+    f : [ [ 'a', 'b' ], 'c' ],
+    g : [ 'c', 'z' ],
+    h : [ 'a', 'd' ],
+    i : [ 'd', 'b' ],
+};
+var solutions = sigsolve([ 'a', 'z' ], pool);
+console.log(JSON.stringify(solutions));
+```
+
+output:
+
+```
+[[["f",["h","i"]],"g"]]
+```
+
+# methods
 
 var sigsolve = require('sigsolve')
 
-sigsolve(target, pool)
-----------------------
+## var solutions = sigsolve(target, pool)
 
 Given a type signature `target` and an object `pool` mapping function names to
 type signatures,
@@ -44,7 +58,6 @@ type signatures,
 return an array of function chain arrays that when composed have the same type
 signature as the `target`.
 
-license
-=======
+# license
 
-MIT/X11
+MIT
