@@ -14,6 +14,13 @@ module.exports = function solve (src, dst, pool) {
                 matches.push([ key ].concat(xs[j]));
             }
         }
+        else if (Array.isArray(x[0]) && x[0][0] === src) {
+            var a = solve(x[1], dst, pool);
+            if (!a.length) continue;
+            var b = solve(x[0][0], x[0][1], pool);
+            if (!b.length) continue;
+            matches.push([ [ key, b ] ].concat(a));
+        }
     }
     
     return matches;
