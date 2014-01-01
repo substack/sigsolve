@@ -1,37 +1,39 @@
 {
-    "name" : "sigsolve",
-    "description" : "type signature satisfiability solver under function composition",
-    "version" : "0.1.0",
-    "repository" : {
-        "type" : "git",
-        "url" : "git://github.com/substack/sigsolve.git"
-    },
-    "main" : "index.js",
-    "keywords" : [
-        "type",
-        "signature",
-        "mad science"
-    ],
-    "directories" : {
-        "lib" : ".",
-        "example" : "example",
-        "test" : "test"
-    },
-    "scripts" : {
-        "test" : "tape test/*.js"
-    },
-    "dependencies" : {
-    },
-    "devDependencies" : {
-        "tap" : "~0.2.4"
-    },
-    "engines" : {
-        "node" : ">=0.4.0"
-    },
-    "license" : "MIT",
-    "author" : {
-        "name" : "James Halliday",
-        "email" : "mail@substack.net",
-        "url" : "http://substack.net"
-    }
+  "name": "sigsolve",
+  "description": "type signature satisfiability solver under function composition",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/substack/sigsolve.git"
+  },
+  "main": "index.js",
+  "keywords": [
+    "type",
+    "signature",
+    "mad science"
+  ],
+  "directories": {
+    "lib": ".",
+    "example": "example",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "dependencies": {
+    "isarray": "0.0.1",
+    "object-keys": "~0.4.0"
+  },
+  "devDependencies": {
+    "tap": "~0.2.4"
+  },
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net"
+  }
 }
