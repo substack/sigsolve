@@ -20,7 +20,11 @@ module.exports = function solve (sig, pool) {
             if (!a.length) continue;
             var b = solve(x[0], pool);
             if (!b.length) continue;
-            matches.push([ [ key, b ] ].concat(a));
+            for (var j = 0; j < a.length; j++) {
+                for (var k = 0; k < b.length; k++) {
+                    matches.push([ [ key, b[k] ] ].concat(a[j]));
+                }
+            }
         }
     }
     
