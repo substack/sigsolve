@@ -9,5 +9,5 @@ var pool = {
     j : [ 'c', 'd' ],
 };
 
-var solutions = sigsolve([ 'a', 'z' ], pool);
+var solutions = sigsolve('a', 'z', pool);
 console.dir(solutions);
