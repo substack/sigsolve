@@ -1,4 +1,4 @@
-var test = require('tap').test;
+var test = require('tape');
 var sigsolve = require('../');
 
 test('a to z', function (t) {

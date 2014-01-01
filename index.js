@@ -1,4 +1,5 @@
-module.exports = function solve (src, dst, pool) {
+module.exports = function solve (sig, pool) {
+    var src = sig[0], dst = sig[1];
     var keys = Object.keys(pool);
     var matches = [];
     
@@ -9,15 +10,15 @@ module.exports = function solve (src, dst, pool) {
             matches.push([ key ]);
         }
         else if (x[0] === src) {
-            var xs = solve(x[1], dst, pool);
+            var xs = solve([ x[1], dst ], pool);
             for (var j = 0; j < xs.length; j++) {
                 matches.push([ key ].concat(xs[j]));
             }
         }
         else if (Array.isArray(x[0]) && x[0][0] === src) {
-            var a = solve(x[1], dst, pool);
+            var a = solve([ x[1], dst ], pool);
             if (!a.length) continue;
-            var b = solve(x[0][0], x[0][1], pool);
+            var b = solve(x[0], pool);
             if (!b.length) continue;
             matches.push([ [ key, b ] ].concat(a));
         }
