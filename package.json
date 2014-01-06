@@ -25,7 +25,7 @@
     "object-keys": "~0.4.0"
   },
   "devDependencies": {
-    "tap": "~0.2.4"
+    "tape": "~2.3.2"
   },
   "engines": {
     "node": ">=0.4.0"
